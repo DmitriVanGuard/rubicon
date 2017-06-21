@@ -5,12 +5,32 @@
 
 	&__info
 		margin-bottom: rem(25px)
+		margin-top: rem(5px)
 
 	&__contacts
 		font-weight: bold
 		i
 			color: #270049
 			margin-right: rem(7px)
+	&__search
+		padding: 0
+		position: relative
+
+		i
+			position: absolute
+			color: #555
+			@extend %centering
+			left: calc(100% - 16px)
+	&__input
+		width: 100%
+		padding: rem(8px) rem(30px) rem(8px) rem(15px)
+		border: 0
+		outline: none
+		background-color: rgba(#999, 0.2)
+		font-style: italic
+		font-size: rem(13px)
+		&::placeholder
+			color: #333
 
 	&__logo
 		text-align: center
