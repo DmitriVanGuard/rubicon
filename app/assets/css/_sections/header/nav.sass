@@ -1,0 +1,26 @@
+.nav
+	background-color: #6D8A95
+	&__list
+		font-size: 0px
+		text-align: center
+	&__item
+		display: inline-block
+		text-transform: uppercase
+		padding: rem(15px) rem(20px)
+		margin-right: rem(50px)
+		position: relative
+
+		&:last-child
+			margin-right: 0
+		&_active
+			&::before
+				content: '\25B6'
+				display: inline-block
+				transform: scale(0.5, 1.2)
+				position: absolute
+				top: 25%
+				left: 0
+				color: #FF3100
+	&__link
+		font-weight: bold
+		color: #fff
