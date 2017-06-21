@@ -1,13 +1,13 @@
 header.header(style="background-image: url('img/bg/head.jpg')")
 	.container
 		.row.header__info
-			.col-lg-7.header__contacts.header__contacts_tele
+			.col-lg-6.header__contacts.header__contacts_tele
 				i(class="fa fa-phone", aria-hidden="true")
 				| +7 (495) 967-33-50
-			.col-lg-7.col-lg-offset-1.header__contacts.header__contacts_email
+			.col-lg-6.header__contacts.header__contacts_email
 				i(class="fa fa-envelope", aria-hidden="true")
 				| info@rubiconpower.ru
-			.col-lg-7.col-lg-offset-2.header__search
+			.col-lg-9.col-lg-offset-3.header__search
 				i(class="fa fa-search", aria-hidden="true")
 				input(type="text", placeholder="Поиск по сайту").header__input
 		.header__logo
@@ -15,7 +15,7 @@ header.header(style="background-image: url('img/bg/head.jpg')")
 	nav.nav
 		.container
 			ul.nav__list
-				li.nav__item
+				li.nav__item(class=BRAND ? 'nav__item_active' : '')
 					a.nav__link(href="#") item1
 				li.nav__item
 					a.nav__link(href="#") item2
@@ -23,5 +23,5 @@ header.header(style="background-image: url('img/bg/head.jpg')")
 					a.nav__link(href="#") item3
 				li.nav__item
 					a.nav__link(href="#") item4
-				li.nav__item.nav__item_active
+				li.nav__item(class=CONTACTS ? 'nav__item_active' : '')
 					a.nav__link(href="#") item5
