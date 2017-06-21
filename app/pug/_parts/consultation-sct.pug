@@ -1,9 +1,13 @@
-section.consultation-sct
+section.consultation-sct(style="background-image: url('img/bg/cons-bg.png');")
 	.container
 		.row
-			.col-lg-12
-			.col-lg-12text
+			.col-lg-12.consultation-sct__left
+				h2.title.consultation-sct__title У вас появились вопросы?
+				p.consultation-sct__text
+					|Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, consequuntur.
+			.col-lg-12.consultation-sct__right
 				input(type="text", name="person_name", placeholder="Имя").consultation-sct__input
 				input(type="text", name="telephone", placeholder="Телефон").consultation-sct__input
 				input(type="text", name="email", placeholder="E-mail").consultation-sct__input
-			a.btn(href="#") Отправить
+			.col-lg-24.consultation-sct__bottom
+				a.btn.consultation-sct__btn(href="#") Отправить
