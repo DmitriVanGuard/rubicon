@@ -10,19 +10,25 @@
 		margin-right: rem(55px)
 		position: relative
 
+		&::before
+			content: '\25B6'
+			display: none
+			transform: scale(0.5, 1.2)
+			position: absolute
+			top: 28%
+			left: 0
+			font-size: rem(18px)
+
 		&:last-child
 			margin-right: 0
 		&_active
 			&::before
-				content: '\25B6'
 				display: inline-block
-				transform: scale(0.5, 1.2)
-				position: absolute
-				top: 34%
-				left: 0
-				font-size: 14px
 				color: $red
 	&__link
 		font-weight: bold
 		color: #fff
 		font-size: rem(18px)
+		transition: color 300ms
+		&:hover
+			color: lighten($red, 15)

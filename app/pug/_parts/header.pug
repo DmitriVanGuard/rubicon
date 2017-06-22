@@ -1,21 +1,23 @@
 header.header(style="background-image: url('img/bg/head.jpg')")
 	.container
 		.row.header__info
-			.col-lg-6.header__contacts.header__contacts_tele.icon_blue
-				i(class="fa fa-phone", aria-hidden="true")
+			.col-lg-6.header__contacts.header__contacts_tele
+				i(class="fa fa-phone", aria-hidden="true").icon_blue
 				| +7 (495) 967-33-50
-			.col-lg-6.header__contacts.header__contacts_email.icon_blue
-				i(class="fa fa-envelope", aria-hidden="true")
+			.col-lg-6.header__contacts.header__contacts_email
+				i(class="fa fa-envelope", aria-hidden="true").icon_blue
 				| info@rubiconpower.ru
 			.col-lg-9.col-lg-offset-3.header__search
 				i(class="fa fa-search", aria-hidden="true")
 				input(type="text", placeholder="Поиск по сайту").header__input
 		.header__logo
 			img(src="img/icons/logo.png", alt="RUBICON - Power Systems").img_div
+	if INDEX
+		include index/slider
 	nav.nav
 		.container
 			ul.nav__list
-				li.nav__item(class=ITEM ? 'nav__item_active' : '')
+				li.nav__item(class=INDEX? 'nav__item_active' : '')
 					a.nav__link(href="index.html") Главная
 				li.nav__item
 					a.nav__link(href="#") О компании
