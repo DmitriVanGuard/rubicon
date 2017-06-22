@@ -12,8 +12,37 @@
 	&__list
 		font-size: 0
 	&__item
-		width: 265px
+		width: rem(265px)
 		display: inline-block
 
+	&__link
+		&:hover
+			.prod-sct__pic
+				&::before
+					background-color: rgba($red, 0.7)
+			.prod-sct__name
+				background-color: #fff
+
 	&__pic
-		height: 205px
+		height: rem(205px)
+		position: relative
+		&::before
+			transition: background 300ms
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+		img
+			max-width: 100%
+			height: 100%
+
+	&__name
+		text-transform: uppercase
+		margin-bottom: 0
+		background-color: #afbec5
+		font-weight: bold
+		transition: background-color 300ms
+		line-height: rem(60px)
