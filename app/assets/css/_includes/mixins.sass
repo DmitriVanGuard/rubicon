@@ -26,7 +26,7 @@
 		@media only screen and (min-width: $phone) and (max-width: ($tablet - 1px))
 			@content
 	@if $device == 'phone-xs'
-		@media only screen and (max-width: $phone)
+		@media only screen and (max-width: ($phone - 1px))
 			@content
 
 %picture

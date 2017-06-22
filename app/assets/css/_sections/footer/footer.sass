@@ -5,10 +5,30 @@
 		@extend %clearfix
 	&__mid
 		text-align: center
+		+responsive('tablet')
+			&_right
+				margin-top: 20px
+				float: right
+		+responsive('phone')
+			&_right
+				margin-top: 15px
+				float: right
+	&__right
+		+responsive('tablet')
+			float: left
+			text-align: left
+		+responsive('phone')
+			float: left
+			text-align: left
+	&__mid, &__left, &__right
+		+responsive('phone-xs')
+			width: 100%
+			text-align: center
+			margin-bottom: 10px
 
 	&__right
 		text-align: right
-
+	
 	&__text
 		color: #fff
 		font-size: rem(18px)
@@ -16,5 +36,15 @@
 			font-weight: 500
 		&_upper
 			margin-bottom: rem(5px)
+		+responsive('laptop')
+			font-size: 15px
 	&__link
 		color: #fff
+	&__vendor
+		margin-left: 5px
+		width: rem(103px)
+		display: inline-block
+		+responsive('laptop')
+			width: 80px
+		img
+			max-width: 100%

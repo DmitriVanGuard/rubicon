@@ -6,6 +6,10 @@
 
 	&__content
 		padding: 0 rem(90px)
+		+responsive('phone')
+			padding: 0 5%
+		+responsive('phone-xs')
+			padding: 0
 
 	&__bottom
 		margin-top: rem(40px)
@@ -18,6 +22,12 @@
 	&__text
 		font-size: rem(22px)
 		color: $blue_grey
+		+responsive('tablet')
+			margin-bottom: 20px
+		+responsive('phone')
+			margin-bottom: 20px
+		+responsive('phone-xs')
+			margin-bottom: 20px
 
 	&__input
 		width: 100%
