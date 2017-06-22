@@ -1,0 +1,37 @@
+.toggles
+	font-size: 0
+	position: absolute
+	@extend %centering
+	top: 88%
+
+	&__item
+		margin-right: rem(50px)
+		display: inline-block
+		&:last-child
+			margin-right: 0
+
+	&__link
+		display: inline-block
+		width: 30px
+		height: 30px
+		background-color: rgba(#fff, 0.25)
+		border-radius: 50%
+		position: relative
+
+		&::before
+			position: absolute
+			@extend %centering
+			content: ''
+			display: inline-block
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			background-color: #607d8b
+			transition: background-color 300ms
+
+		&_active
+			&::before
+				background-color: #dd2c00
+			
+		&:hover::before
+			background-color: #dd2c00

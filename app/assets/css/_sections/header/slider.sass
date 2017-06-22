@@ -1,3 +1,27 @@
 .slider
 	height: 525px
 	background-color: rgba(101, 58, 33, 0.5)
+	position: relative
+
+	&__visible
+		width: 950px
+		position: absolute
+		@extend %centering
+		text-align: center
+
+	&__title
+		font-weight: bold
+		text-transform: uppercase
+		font-size: rem(40px)
+
+	&__subtitle
+		font-weight: 500
+		font-size: rem(36px)
+		margin-bottom: rem(20px)
+		line-height: rem(44px)
+
+	&__title, &__subtitle
+		color: #fff
+
+	&__btn
+		padding: rem(15px) rem(60px)
