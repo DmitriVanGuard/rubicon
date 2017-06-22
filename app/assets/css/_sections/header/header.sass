@@ -2,7 +2,8 @@
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: top center
-
+	+responsive('phone-xs')
+		background-size: initial
 	&__content
 		+responsive('phone')
 			padding: 20px 0
@@ -13,24 +14,34 @@
 		+responsive('phone')
 			float: right
 			margin: 0
+			font-size: 14px
+			width: 48%
+		+responsive('phone-xs')
+			text-align: center
 
 	&__contacts
 		font-weight: bold
 		i
 			margin-right: rem(7px)
+		+responsive('phone-xs')
+			margin-bottom: 4px
 	&__search
 		padding: 0
 		position: relative
-		+responsive('phone')
-			padding: 0 10px
-			i
-				left: 91%
-
 		i
 			position: absolute
 			color: #555
 			@extend %centering
 			left: calc(100% - 16px)
+		+responsive('phone')
+			padding: 0 10px
+			i
+				left: 91%
+		+responsive('phone-xs')
+			background-color: rgba(#888, 0.4)
+			width: 90%
+			margin: 0 auto
+			padding: 0 10px 0 0
 	&__input
 		width: 100%
 		padding: rem(8px) rem(30px) rem(8px) rem(15px)
@@ -48,7 +59,26 @@
 		+responsive('phone')
 			float: left
 			margin: 0
-			margin-left: 10px
+			width: 49%
 		img
 			width: rem(390px)
 			height: rem(89px)
+			+responsive('phone')
+				width: 245px
+				height: 56px
+
+	&__hamb
+		position: fixed
+		top: 10px
+		right: 20px
+		color: $black
+		font-size: 30px
+		z-index: 5
+		&:hover
+			color: $black
+
+#hamb:checked ~ .nav
+	+responsive('phone')
+		right: 30%
+	+responsive('phone-xs')
+		right: 20%

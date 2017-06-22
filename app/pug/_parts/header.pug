@@ -14,6 +14,9 @@ header.header(style="background-image: url('img/bg/head.jpg')")
 			img(src="img/icons/logo.png", alt="RUBICON - Power Systems").img_div
 	if INDEX
 		include index/slider
+	input(type="checkbox", name="hamburger", id="hamb").hidden.header__check
+	label(for="hamb").visible-xs.header__hamb
+		i(class="fa fa-bars", aria-hidden="true")
 	nav.nav
 		.container
 			ul.nav__list
