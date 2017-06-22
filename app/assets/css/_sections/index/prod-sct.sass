@@ -6,26 +6,34 @@
 	padding: rem(45px) 0
 
 	&__btn
-		border-color: #30414a
-		color: #30414a
-
+		border-color: #607d8b
+		color: #607d8b
+		transition: color 300ms, border-color 300ms
+		&:hover
+			border-color: $black
+			color: $black
 	&__list
-
+		margin-bottom: rem(30px)
+		@extend %clearfix
 	&__item
 		// width: rem(265px)
 		height: rem(265px)
-		&_modal
-			position: relative
-			&::before
-				position: absolute
-				background-color: rgba(20, 20, 20, 0.8)
-				content: ''
-				display: inline-block
-				top: 0
-				bottom: 0
-				right: 0
-				left: 0
+		margin-bottom: rem(20px)
 
+	&__bg
+		height: 100%
+		width: 100%
+		position: relative
+		&::before
+			position: absolute
+			background-color: rgba(20, 20, 20, 0.8)
+			content: ''
+			display: inline-block
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+		
 	&__link
 		&:hover
 			.prod-sct__pic
@@ -65,9 +73,19 @@
 			background-color: transparent
 
 	&__content
-		position: relative
+		position: absolute
 		z-index: 1
+		@extend %centering
+		width: 60%
+		&_right
+			left: 60%
+			text-align: right
+		&_left
+			left: 40%
+			text-align: left
+
 	&__more
 		font-size: rem(18px)
 		color: #fff
 		border-color: #fff
+		background-color: rgba(#000, .4)
