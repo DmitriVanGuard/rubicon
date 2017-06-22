@@ -3,10 +3,16 @@
 	background-size: cover
 	background-position: top center
 
+	&__content
+		+responsive('phone')
+			padding: 20px 0
 	&__info
 		margin-bottom: rem(25px)
 		margin-top: rem(10px)
 		font-size: rem(20px)
+		+responsive('phone')
+			float: right
+			margin: 0
 
 	&__contacts
 		font-weight: bold
@@ -15,6 +21,10 @@
 	&__search
 		padding: 0
 		position: relative
+		+responsive('phone')
+			padding: 0 10px
+			i
+				left: 91%
 
 		i
 			position: absolute
@@ -35,3 +45,10 @@
 	&__logo
 		text-align: center
 		margin-bottom: rem(15px)
+		+responsive('phone')
+			float: left
+			margin: 0
+			margin-left: 10px
+		img
+			width: rem(390px)
+			height: rem(89px)

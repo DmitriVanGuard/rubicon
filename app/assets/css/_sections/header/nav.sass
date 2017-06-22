@@ -9,6 +9,11 @@
 		padding: rem(20px)
 		margin-right: rem(55px)
 		position: relative
+		+responsive('tablet')
+			padding: rem(15px)
+			margin-right: 2rem
+			&::before
+				top: 24%
 
 		&::before
 			content: '\25B6'
