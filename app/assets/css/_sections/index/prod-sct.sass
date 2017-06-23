@@ -15,10 +15,22 @@
 	&__list
 		margin-bottom: rem(30px)
 		@extend %clearfix
+		+responsive('phone')
+			max-width: 570px
+			margin: 0 auto
+		+responsive('phone-xs')
+			width: 80%
+			max-width: 300px
+			margin: 0 auto
 	&__item
-		// width: rem(265px)
 		height: rem(265px)
 		margin-bottom: rem(20px)
+		+responsive('laptop')
+			height: 225px
+		+responsive('tablet')
+			height: 175px
+		+responsive('phone-xs')
+			width: 100%
 
 	&__bg
 		height: 100%
@@ -35,6 +47,7 @@
 			left: 0
 		
 	&__link
+		display: block
 		&:hover
 			.prod-sct__pic
 				&::before
@@ -45,6 +58,12 @@
 	&__pic
 		height: rem(205px)
 		position: relative
+		+responsive('laptop')
+			height: 175px
+		+responsive('tablet')
+			height: 130px
+		// +responsive('phone-xs')
+		// 	height: 125px
 		&::before
 			transition: background 300ms
 			content: ''
@@ -65,12 +84,18 @@
 		background-color: #afbec5
 		font-weight: bold
 		transition: background-color 300ms
-		line-height: rem(60px)
+		&_block
+			line-height: rem(60px)
+			+responsive('laptop')
+				line-height: 50px
+			+responsive('tablet')
+				line-height: 45px
 
 		&_red
 			color: $red
 			text-transform: initial
 			background-color: transparent
+			margin-bottom: 10px
 
 	&__content
 		position: absolute
@@ -89,3 +114,5 @@
 		color: #fff
 		border-color: #fff
 		background-color: rgba(#000, .4)
+		+responsive('phone-xs')
+			padding: .5rem 2.5rem
