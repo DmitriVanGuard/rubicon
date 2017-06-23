@@ -1,7 +1,5 @@
 .service-sct
-	&__title
-		text-align: center
-
+	text-align: center
 	&__flex
 		display: flex
 		@extend %clearfix
@@ -23,6 +21,8 @@
 
 	&__item
 		position: relative
+		margin-bottom: 20px
+		text-align: left
 		+responsive('phone-xs')
 			width: 100%
 
@@ -41,6 +41,8 @@
 			.service-sct__name
 				height: calc(100% - 20px)
 				margin-bottom: 0
+				+responsive('phone-xs')
+					margin-bottom: 15px
 
 	&__pic
 		height: 220px
@@ -59,7 +61,8 @@
 			margin-bottom: rem(10px)
 			+responsive('laptop')
 				font-size: 25px
-
+			+responsive('phone-xs')
+				font-size: 20px
 
 	&__focus
 		color: #000
@@ -76,6 +79,8 @@
 	&__btn
 		+responsive('laptop')
 			font-size: 15px
+		+responsive('phone-xs')
+			font-size: 12px
 	&__more
 		text-transform: uppercase
 		color: $red
