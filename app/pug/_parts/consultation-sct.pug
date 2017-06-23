@@ -1,6 +1,6 @@
 section.consultation-sct(style="background-image: url('img/bg/cons-bg.png');")
 	.container
-		.row.consultation-sct__content
+		form.row.consultation-sct__content(action="", method="")
 			.col-lg-12.consultation-sct__left
 				h2.title.consultation-sct__title У вас появились вопросы?
 				p.consultation-sct__text
@@ -10,4 +10,4 @@ section.consultation-sct(style="background-image: url('img/bg/cons-bg.png');")
 				input(type="text", name="telephone", placeholder="Телефон").consultation-sct__input
 				input(type="text", name="email", placeholder="E-mail").consultation-sct__input
 			.col-lg-24.consultation-sct__bottom
-				a.btn.consultation-sct__btn(href="#") Отправить
+				button.btn.consultation-sct__btn(type='submit') Отправить
