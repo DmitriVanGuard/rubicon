@@ -2,6 +2,12 @@
 	height: 525px
 	background-color: rgba(101, 58, 33, 0.5)
 	position: relative
+	+responsive('tablet')
+		height: 100vh
+	+responsive('phone')
+		height: 100vh
+	+responsive('phone-xs')
+		height: 100vh
 
 	&__visible
 		width: 950px
@@ -10,23 +16,57 @@
 		top: 45%
 		text-align: center
 		overflow: hidden
+
+		+responsive('tablet')
+			top: 42%
+			width: 750px
+		+responsive('phone')
+			top: 42%
+			width: 460px
+		+responsive('phone-xs')
+			top: 42%
+			width: 275px
+
 	&__list
 		font-size: 0
 		width: 1900px
+		+responsive('tablet')
+			width: 1500px
+		+responsive('phone')
+			width: 920px
+		+responsive('phone-xs')
+			width: 550px
+
 	&__item
 		width: 950px
 		display: inline-block
+		+responsive('tablet')
+			width: 750px
+		+responsive('phone')
+			width: 460px
+		+responsive('phone-xs')
+			width: 275px
 
 	&__title
 		font-weight: bold
 		text-transform: uppercase
 		font-size: rem(40px)
+		+responsive('phone')
+			font-size: 25px
 
 	&__subtitle
 		font-weight: 500
 		font-size: rem(36px)
 		margin-bottom: rem(20px)
 		line-height: rem(44px)
+		+responsive('phone')
+			font-size: 23px
+			line-height: initial
+			margin-bottom: 30px
+		+responsive('phone-xs')
+			font-size: 18px
+			line-height: initial
+			margin-bottom: 30px
 
 	&__title, &__subtitle
 		color: #fff
