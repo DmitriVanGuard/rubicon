@@ -1,18 +1,32 @@
 .service-sct
-	&__pic
-		// width: rem(265px)
-		// height: rem(220px)
-
 	&__title
 		text-align: center
 
+	&__flex
+		display: flex
+
 	&__content
+		height: 100%
 		box-shadow: 0 0 3px rgba(#555, .2)
 
 	&__item
 		position: relative
 
+		&_long
+			margin-bottom: 26px
+			height: 285px
+
+		&_small 
+			height: 400px
+
+			.service-sct__desc
+				height: calc(100% - 220px)
+			.service-sct__name
+				height: calc(100% - 20px)
+				margin-bottom: 10px
+
 	&__pic
+		height: 220px
 		img
 			max-width: 100%
 
@@ -21,9 +35,16 @@
 		font-weight: bold
 		font-size: rem(18px)
 		margin-bottom: rem(30px)
+
+		&_red
+			color: $red
+			font-size: rem(30px)
+			margin-bottom: rem(10px)
+
 	&__focus
 		color: #000
 		text-transform: uppercase
+		display: block
 
 	&__desc
 		padding: rem(20px) rem(18px)
@@ -44,7 +65,7 @@
 		position: relative
 		&::before
 			position: absolute
-			background-color: rgba(20, 20, 20, 0.8)
+			background-color: rgba(20, 20, 20, 0.7)
 			content: ''
 			display: inline-block
 			top: 0
@@ -56,10 +77,5 @@
 		position: absolute
 		z-index: 1
 		@extend %centering
-		width: 60%
-		&_right
-			left: 60%
-			text-align: right
-		&_left
-			left: 40%
-			text-align: left
+		width: 75%
+		text-align: right
