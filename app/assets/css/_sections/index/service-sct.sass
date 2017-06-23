@@ -3,6 +3,7 @@
 	&__flex
 		display: flex
 		@extend %clearfix
+		padding: 0
 		+responsive('tablet')
 			display: block
 		+responsive('phone')
@@ -11,13 +12,8 @@
 			display: block
 
 	&__container
-		+responsive('phone-xs')
-			width: 90%
-			margin: 0 auto
-
-	&__content
-		height: 100%
-		box-shadow: 0 0 3px rgba(#555, .2)
+		+responsive('phone')
+			max-width: 480px
 
 	&__item
 		position: relative
@@ -33,6 +29,9 @@
 				height: 255px
 			
 		&_small 
+			.service-sct__content
+				+responsive('tablet')
+					height: 365px
 			.service-sct__desc
 				height: calc(100% - 220px)
 				+responsive('laptop')
@@ -43,6 +42,12 @@
 				margin-bottom: 0
 				+responsive('phone-xs')
 					margin-bottom: 15px
+
+	&__content
+		height: 100%
+		box-shadow: 0 0 3px rgba(#555, .2)
+		+responsive('tablet')
+			height: 465px
 
 	&__pic
 		height: 220px
@@ -61,6 +66,8 @@
 			margin-bottom: rem(10px)
 			+responsive('laptop')
 				font-size: 25px
+			+responsive('phone')
+				font-size: 22px
 			+responsive('phone-xs')
 				font-size: 20px
 
@@ -79,6 +86,8 @@
 	&__btn
 		+responsive('laptop')
 			font-size: 15px
+		+responsive('phone')
+			font-size: 13px
 		+responsive('phone-xs')
 			font-size: 12px
 	&__more
