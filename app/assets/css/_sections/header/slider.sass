@@ -51,14 +51,22 @@
 		font-weight: bold
 		text-transform: uppercase
 		font-size: rem(40px)
+		+responsive('tablet')
+			font-size: 30px
 		+responsive('phone')
 			font-size: 25px
+		+responsive('phone-xs')
+			font-size: 23px
 
 	&__subtitle
 		font-weight: 500
 		font-size: rem(36px)
 		margin-bottom: rem(20px)
 		line-height: rem(44px)
+		+responsive('tablet')
+			font-size: 25px
+			line-height: initial
+			margin-bottom: 30px
 		+responsive('phone')
 			font-size: 23px
 			line-height: initial
